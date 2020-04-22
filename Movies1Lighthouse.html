@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Song Myung' rel='stylesheet'>
+</head>
+<style>
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  border-bottom: 16px solid #3498db;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+   #links{
+     background-color: rgb(0, 204, 255, 1);
+     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+     text-align: center;
+     position: sticky;
+     top: 0;
+     z-index: 2;
+   }
+   a {
+     text-decoration: none;
+  padding: 0px 10px;
+  word-wrap: normal;
+  display: inline-block;
+   }
+   h1{
+      text-align: center;
+       font-family: 'Song Myung';
+       font-size: 70px;
+       color: rgb(255, 51, 255);
+   }
+   p{
+     font-family: serif;
+   }
+   #dis{
+     background-color: rgb(204, 255, 102, 0.5);
+     width: 400px;
+     border: 300px rgb(204, 255, 102);
+     border-radius: 20px;
+     margin: 5px 5px;
+     padding: 10px;
+    }
+    .plot{
+      font-size: 20px;
+    }
+    #plt{
+      background-color: rgb(102, 255, 153, 0.5);
+      width: 300px;
+      border: 300px rgb(102, 255, 153);
+      border-radius: 20px;
+      margin: 5px 5px;
+      padding: 10px;
+    }
+    #video{
+      position: relative;
+      right: -600px;
+      top: -810px;
+    }
+    .poster{
+      position: relative;
+      right: -40px;
+    }
+    #rev{
+      background-color: rgb(51, 153, 255, 0.5);
+      width: 500px;
+      border: 300px;
+      border-radius: 15px;
+      margin: 5px 5px;
+      padding: 10px;
+      position: relative;
+      right: -600px;
+      top: -800px;
+    }
+    h4{
+      font-size: 30px;
+    }
+    .review{
+      font-size: 25px;
+    }
+    body{
+      background-image: url(https://m.media-amazon.com/images/M/MV5BZGU1MDYzOTktOTcxZi00ZmNhLWIxNDYtZTY1YzdjM2QwOTBlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SY1000_CR0,0,1195,1000_AL_.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+</style>
+<body onload="myFunction()" style="margin:0;">
+<div id="links">
+<a href="Jrifs blog home.html">HOME </a>
+<a href="Movies1.html">MOVIES <a>
+<a href="#">TV SERIES </a>
+<a href="#">BOOKS</a>
+</div>
+
+<h1 >MOVIES</h1>
+
+<img src="https://izleryazar.com/wp-content/uploads/2019/12/The-Lighthouse-Poster.jpg" alt="The Lighthouse" class="poster">
+<div id="dis">
+  <h3>The Lighthouse(2019)</h3>
+
+  <p>Directed by Robert Eggers</p>
+  <p>Starring Williem Dafoe & Robert Pattinson</p>
+  <p>Genre: Horror/Drama</p>
+  <p>Rotten Tomatoes: 90%</p>
+  <p>My Rating: A (Yeah I know! I'm following Chris Stuckmann)</p>
+
+</div>
+<div id="plt">
+<p class="plot"><em>Plot: Two lighthouse keepers try to maintain their sanity while living on a remote and mysterious New England island in the 1890s.</em></p>
+</div>
+<div id="video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Hyag7lR8CPA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<div id="rev">
+<h4>My Thoughts</h4>
+<p class="review">Honestly it's the first movie starring Robert Pattinson I've seen after those God awful Twilight movies. The duo of Williem Dafoe & Robert Pattinson was great. Cinematography was so fantastic that it might give you an eyegasm. I think the black & White shots and the aspect ratio gave the film a cool surreal feeling. But above all is the story of this film. it's the story of two men going slowly insane while living in a lighthouse far from civilization. You can feel the horror of this insanity most when Ephraim(Pattinson) killes a seagul violently. Ephraim slowly becoming an alcoholic was also a dark theme in the film. But the island & the lighthouse was also a kind of a sinister place. There was a scene where Ephraim had intercourse with a mermaid(!). It might be the figurative representation of him going insane or it might be a literal scene. Overall director did a witty thing here. There was also the plot point of Thomas(Dafoe) being obsessed with the lamp of the lighthouse. Later Ephraim also become obsessed with the light. And it eventually led them to their demise. It might be the main theme of this movie which is darkness lingering in the light. There was also some greek mythological stuff metaphorically. I'm not going to talk about that as I don't know much about greek mythology. But you can check it out. Overall it's a great movie. I will defenitely recommend The Lighthouse.</p>
+</div>
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+</body>
+</html>
