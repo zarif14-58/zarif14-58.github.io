@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link href='https://fonts.googleapis.com/css?family=Sonsie One' rel='stylesheet'></head>
+<style>
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  border-bottom: 16px solid #3498db;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+h1{
+text-align: center;
+font-size: 50px;
+font-family: 'Sonsie One';
+color: rgb(0, 172, 230);
+}
+p{
+text-align: center;
+font-size: 25px;
+font-family: sans-serif;
+color: rgb(102, 255, 153);
+}
+#movies{
+float: left;
+}
+#books{
+float:right;
+}
+img{
+  width: 200px;
+  height: 200px;
+}
+#icons{
+  position: relative;
+  top: 120px;
+}
+body{
+  background-image: url('https://images.freecreatives.com/wp-content/uploads/2015/03/Huge-Backgrounds-9.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+<body onload="myFunction()" style="margin:0;">
+<div id="loader"></div>
+<h1>WELCOME TO JARIF's BLOG<h1>
+<p>Hi! Welcome to my blog. I write about various movies, tv series and books here.</p>
+<p>They're not necessarily a review(or maybe they are) but rather about the feelings I had watching or reading them.</p>
+<div id="icons">
+<a href="Movies1.html"><img src="http://icon-library.com/images/icon-for-movie/icon-for-movie-0.jpg" alt="MOVIES" id="movies"></a>
+<a href="#"><img src="https://cdn0.iconfinder.com/data/icons/flat-designed-circle-icon/1000/television.png" alt="TV SERIES"></a>
+<a href="#"><img src="https://i.dlpng.com/static/png/4038521-mypc-website-icon-2-bookspng-lapeer-district-library-library-books-png-300_300_preview.webp" alt="BOOKS" id="books"></a>
+</div>
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+</body>
+</html>
