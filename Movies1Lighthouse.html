@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=Song Myung' rel='stylesheet'>
 </head>
 <style>
@@ -73,11 +74,51 @@
     .review{
       font-size: 25px;
     }
+  .trailer{
+    width: 560px;
+    height: 315px;
+  }
     body{
       background-image: url(https://m.media-amazon.com/images/M/MV5BZGU1MDYzOTktOTcxZi00ZmNhLWIxNDYtZTY1YzdjM2QwOTBlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SY1000_CR0,0,1195,1000_AL_.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
+    }
+    @media only screen and (max-width: 768px){
+      #video{
+        position: absolute;
+        top: 1245px;
+        right: auto;
+      }
+      .trailer{
+        width: 356px;
+        height: 200px;
+      }
+      .poster{
+        position: relative;
+        right: -25px;
+        width: 305px;
+        height: 490px;
+      }
+      #rev{
+        background-color: rgb(51, 153, 255, 0.5);
+        width: 330px;
+        border: 300px;
+        border-radius: 15px;
+        margin: 5px 5px;
+        padding: 10px;
+        position: absolute;
+        top: 1500px;
+        right: auto;
+      }
+      #dis{
+        background-color: rgb(204, 255, 102, 0.5);
+        width: 330px;
+        border: 300px rgb(204, 255, 102);
+        border-radius: 20px;
+        margin: 5px 5px;
+        padding: 10px;
+      }
     }
   }
 </style>
@@ -106,7 +147,7 @@
 <p class="plot"><em>Plot: Two lighthouse keepers try to maintain their sanity while living on a remote and mysterious New England island in the 1890s.</em></p>
 </div>
 <div id="video">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Hyag7lR8CPA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Hyag7lR8CPA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="trailer"></iframe>
 </div>
 
 <div id="rev">
