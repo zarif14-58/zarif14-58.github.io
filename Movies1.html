@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=Song Myung' rel='stylesheet'>
 </head>
 <style>
@@ -26,15 +27,9 @@
        color: rgb(255, 51, 255);
    }
    #movies_one{
-     position: relative;
-     top: 80px;
-     right: -146px;
-   }
-   #lt{
-     float: left;
-   }
-   #logan{
-     float: right;
+     display: flex;
+     height: 400px;
+     flex-direction: row;
    }
    img{
      width: 300px;
@@ -46,6 +41,17 @@
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-size: cover;
+   }
+   @media only screen and (max-width: 768px){
+     #movies_one{
+      display: flex;
+      height: 400px;
+      flex-direction: column;
+      align-items: center;
+     }
+     img{
+       max-width: 100%;
+     }
    }
  </style>
  <body>
