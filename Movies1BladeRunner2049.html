@@ -4,33 +4,7 @@
   <link href='https://fonts.googleapis.com/css?family=Song Myung' rel='stylesheet'>
 </head>
 <style>
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 50px;
-  height: 50px;
-  margin: -75px 0 0 -75px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  border-bottom: 16px solid #3498db;
-  width: 50px;
-  height: 50px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
 
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
    #links{
      background-color: rgb(0, 204, 255, 1);
      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -108,7 +82,7 @@
       background-size: cover;
     }
 </style>
-<body onload="myFunction()" style="margin:0;">
+<body>
 <nav id="links">
 <a href="Jrifs blog home.html">HOME </a>
 <a href="Movies1.html">MOVIES <a>
@@ -139,17 +113,6 @@
 <h4>My Thoughts</h4>
 <p class="review">An inspiring piece of work. Just amazing! This movie was visually so stunning that every shot, every scene looked like a piece of pure art. This is that type of movie which can only be fully enjoyed & felt in a multiplex. Denis Villeneuve did a fantastic job. I also liked his other films such as Prisoners & Arrival. The synth layerd background music really furnished the film's cyber-punk theme. Ryan Gosling was great as K. The most dark theme was in my opinion, the representation of this post-apocalyptic future. Everything is dark & gritty. I saw K as a "lonely man" in this film. Then again he is not necessarily a human. But I felt sympathy towards K as it is said replicants are more human than human. The relationship between K and his AI girlfriend Joi was interesting. We basically see a machine falling in love with another machine but it giving a humanly feeling is amazing. Harrison Ford reprises his role as Rick Deckard from Blade Runner(1982) and that question is still not answered. However the most effective scene of the film was I think, K lying motionless on the steps, looking up at the snowing sky perhaps completing his life. In the end, this movie is a visual masterpiece which really inspires you about the craft of film making.</p>
 </div>
-<script>
-var myVar;
 
-function myFunction() {
-  myVar = setTimeout(showPage, 3000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-</script>
 </body>
 </html>
