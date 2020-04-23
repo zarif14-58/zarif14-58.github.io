@@ -4,33 +4,7 @@
   <link href='https://fonts.googleapis.com/css?family=Song Myung' rel='stylesheet'>
 </head>
 <style>
-  #loader {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 1;
-    width: 50px;
-    height: 50px;
-    margin: -75px 0 0 -75px;
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    border-bottom: 16px solid #3498db;
-    width: 50px;
-    height: 50px;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
-  }
 
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
    #links{
      background-color: rgb(0, 204, 255, 1);
      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -74,7 +48,7 @@
      background-size: cover;
    }
  </style>
- <body onload="myFunction()" style="margin:0;">
+ <body>
    <nav id="links">
    <a href="Jrifs blog home.html">HOME </a>
    <a href="#">MOVIES <a>
@@ -89,18 +63,7 @@
    <a href="Movies1BladeRunner2049.html"><img src="https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="Blade Runner 2049"></a>
    <a href="#"><img src="https://m.media-amazon.com/images/M/MV5BYzc5MTU4N2EtYTkyMi00NjdhLTg3NWEtMTY4OTEyMzJhZTAzXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_.jpg" alt="Logan" id="logan"></a>
   </div>
-  <script>
-  var myVar;
 
-  function myFunction() {
-    myVar = setTimeout(showPage, 3000);
-  }
-
-  function showPage() {
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("myDiv").style.display = "block";
-  }
-  </script>
 
   </body>
   </html>
