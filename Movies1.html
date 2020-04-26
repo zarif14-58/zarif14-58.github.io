@@ -6,19 +6,50 @@
 </head>
 <style>
 
-   #links{
+   /*#links{
      background-color: rgb(0, 204, 255, 1);
      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
      text-align: center;
      position: sticky;
      top: 0;
      z-index: 2;
+   }*/
+  
+   ul{
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background-color: #333;
+     position: fixed;
+     top: 0px;
+     width: 100%;
+     z-index: 2;
    }
+   li{
+     float: left;
+   }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+     text-decoration: none;
+  padding: 14px 16px;
+  /*word-wrap: normal;
+  display: inline-block;*/
+   }
+   li a:hover:not(.active){
+     background-color: #111;
+   }
+  .active{
+    background-color: #4CAF50;
+  }
+  
    a {
      text-decoration: none;
   padding: 0px 10px;
-  word-wrap: normal;
-  display: inline-block;
+  /*word-wrap: normal;
+  display: inline-block;*/
    }
    h1{
       text-align: center;
@@ -28,8 +59,10 @@
    }
    #movies_one{
      display: flex;
-     height: 400px;
+     height: auto;
      flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
    }
    img{
      width: 300px;
@@ -45,22 +78,33 @@
    @media only screen and (max-width: 768px){
      #movies_one{
       display: flex;
-      height: 400px;
+      height: auto;
       flex-direction: column;
       align-items: center;
+       justify-content: space-between;
      }
      img{
        max-width: 100%;
      }
+     header{
+       position: relative;
+       top: 40px;
+       z-index: 1;
+     }
+     a{
+       font-size: 15px;
+     }
    }
  </style>
  <body>
+   <ul>
    <nav id="links">
-   <a href="index.html">HOME </a>
-   <a href="#">MOVIES <a>
-   <a href="blankpge.html">TV SERIES </a>
-   <a href="blankpge.html">BOOKS</a>
+     <li><a href="index.html" class="active">HOME</a></li>
+     <li><a href="#">MOVIES</a></li>
+     <li><a href="blankpge.html">TV SERIES</a></li>
+     <li><a href="blankpge.html">BOOKS</a></li>
    </nav>
+   </ul>
    <header>
    <h1 >MOVIES</h1>
      </header>
