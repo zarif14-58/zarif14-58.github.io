@@ -3,6 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=Song Myung' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
 
@@ -15,7 +16,7 @@
      z-index: 2;
    }*/
   
-   ul{
+   /*ul{
      list-style-type: none;
      margin: 0;
      padding: 0;
@@ -25,25 +26,41 @@
      top: 0px;
      width: 100%;
      z-index: 2;
-   }
-   li{
-     float: left;
-   }
-  li a {
+   }*/
+   
+  /*li a {
     display: block;
     color: white;
     text-align: center;
      text-decoration: none;
   padding: 14px 16px;
-  /*word-wrap: normal;
-  display: inline-block;*/
+  word-wrap: normal;
+  display: inline-block;
+   }*/
+
+.topnav{
+     overflow: hidden;
+     background-color: #333;
    }
-   li a:hover:not(.active){
-     background-color: #111;
+   .topnav a {
+     float: left;
+     display: block;
+     color: #f2f2f2;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 17px;
    }
-  .active{
-    background-color: #4CAF50;
-  }
+   .topnav a:hover {
+  background-color: /*#ddd;*/red;
+}
+.topnav a.active {
+     background-color: #4CAF50;
+     color: white;
+   }
+.topnav .icon{
+  display: none;
+}
   
    h1{
        text-align: center;
@@ -86,20 +103,43 @@
        top: 40px;
        z-index: 1;
      }
-     a{
+     /*a{
        font-size: 15px;
-     }
+     }*/
    }
+
+@media screen and (max-width: 768px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
  </style>
  <body>
-   <div id="main">
-   <nav id="links">
-     <ul>
-     <li><a href="index.html" class="active">HOME</a></li>
-     <li><a href="#">MOVIES</a></li>
-     <li><a href="blankpge.html">TV SERIES</a></li>
-     <li><a href="blankpge.html">BOOKS</a></li>
-     </ul>
+   <nav class="topnav" id="myTopnav">
+     <a href="index.html" class="active">HOME</a>
+     <a href="#">MOVIES</a>
+     <a href="blankpge.html">TV SERIES</a>
+     <a href="blankpge.html">BOOKS</a>
+     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+     </a>
    </nav>
    <header>
    <h1>MOVIES</h1>
@@ -110,8 +150,17 @@
    <a href="Movies1Logan.html"><img src="https://m.media-amazon.com/images/M/MV5BYzc5MTU4N2EtYTkyMi00NjdhLTg3NWEtMTY4OTEyMzJhZTAzXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_.jpg" alt="Logan" id="logan"></a>
    <a href="blankpge.html"><img src="https://m.media-amazon.com/images/M/MV5BMTg5Mjk2NDMtZTk0Ny00YTQ0LWIzYWEtMWI5MGQ0Mjg1OTNkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,669,1000_AL_.jpg" alt="Shaun of the Dead"></a>
   </div>
-   </div>
 
-
+<script>
+  function myFunction(){
+     var x = document.getElementById("myTopnav");
+     if(x.className === "topnav"){
+         x.className += " responsive";
+     }
+     else{
+         x.className = "topnav";
+     }
+   }
+</script>
   </body>
   </html>
