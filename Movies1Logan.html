@@ -3,6 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=Song Myung' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
 
@@ -21,7 +22,7 @@
   display: inline-block;
    }*/
   
-  ul{
+  /*ul{
      list-style-type: none;
      margin: 0;
      padding: 0;
@@ -41,15 +42,39 @@
     text-align: center;
      text-decoration: none;
   padding: 14px 16px;
-  /*word-wrap: normal;
-  display: inline-block;*/
+  word-wrap: normal;
+  display: inline-block;
    }
    li a:hover:not(.active){
      background-color: #111;
    }
   .active{
     background-color: #4CAF50;
-  }
+  }*/
+  
+  .topnav{
+     overflow: hidden;
+     background-color: #333;
+   }
+   .topnav a {
+     float: left;
+     display: block;
+     color: #f2f2f2;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 17px;
+   }
+   .topnav a:hover {
+   background-color: /*#ddd;*/red;
+   }
+  .topnav a.active {
+     background-color: #4CAF50;
+     color: white;
+   }
+  .topnav .icon{
+   display: none;
+ }
   
    h1{
       text-align: center;
@@ -116,6 +141,7 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
+      margin: 0;
     }
     @media only screen and (max-width: 768px){
       #video{
@@ -159,19 +185,43 @@
         background-size: cover;
       }
       
-      a{
+      /*a{
         font-size: 15px;
+      }*/
+    }
+  
+  @media screen and (max-width: 768px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+     float: right;
+     display: block;
+    }
+  }
+  @media screen and (max-width: 768px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
       }
     }
+  
 </style>
 <body>
-<nav id="links">
-  <ul>
-  <li><a href="index.html" class="active">HOME</a></li>
-  <li><a href="Movies1.html">MOVIES</a></li>
-  <li><a href="blankpge.html">TV SERIES</a></li>
-  <li><a href="blankpge.html">BOOKS</a></li>
-  </ul>
+<nav class="topnav" id="myTopnav">
+  <a href="index.html" class="active">HOME</a>
+  <a href="Movies1.html">MOVIES</a>
+  <a href="blankpge.html">TV SERIES</a>
+  <a href="blankpge.html">BOOKS</a>
+  <a href="blankpge.html">ABOUT</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
 </nav>   
 <header>
 <h1 >MOVIES</h1>
@@ -198,6 +248,18 @@
 <h4>My Thoughts</h4>
 <p class="review">Wolverine is one of my favourite superheroes and watching a wolverine solo film that doesn't suck is awesome. This movie is one of the best superhero films I've watched. Logan fans deserved this film. Due to PG-13 rating, we really didn't get much scope to enjoy the fully raged Wolverine but this film did a fantastic job at this. This is also not your typical superhero film. It's not only a superhero movie but also a western. Keep in mind that it's R rated and there's a lot of blood and gore, but it's worth it. Despite being so bloody violent Logan is also very emotionally effective. We see an aged and severely sick Proffesor X being taken care by Wolverine and Caliban. Wolverine is also not physically and mentally well. Because of Adamantium poisoning, Logan's healing ability is falling & he is actually AGING. He is working as a limo driver & it seems that he is secretly waiting for his death. But everything changes when he met Laura, a mutant child who has the same powers as Logan. Turnes out that she is his daughter. She is being chased by Transgien, an evil company doing secret experiment on mutants. To protect her, Logan, Laura & Charles Xavier take a journey across the road. As an avide fan of X-Men, this film gave me many memorable moments. The relation between Xavier & Laura was very lovely and adorable. Proffesor X's death filled my heart with great sorrow. But the best part of the movies was the last fight scene between Wolverine and his evil clone. It is everything I can expect from a Wolverine movie. Amd I'm gonna confess, I cried during Logan's death scene. It beautifully fulfilled the prophecy from The Wolverine(2013). Finally this film perfectly completed Logan's arc. Hugh Jackman was fantastic at his last act as Wolverine. He will be always the Wolverine in our heart.</p>
 </div>
+  
+<script>
+    function myFunction(){
+      var x = document.getElementById("myTopnav");
+      if(x.className === "topnav"){
+        x.className += " responsive";
+      }
+      else{
+        x.className = "topnav";
+      }
+    }
+</script>
 
 </body>
 </html>
